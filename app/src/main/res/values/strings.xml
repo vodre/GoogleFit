@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GoogleFit</string>
+    <string name="enable_google_fit">Enable Google Fit</string>
+    <string name="last_google_sync_fit_date">Last Google Sync Fit: %1$s</string>
+    <string name="systolic">Sys: %1$s</string>
+    <string name="diastolic">Dia: %1$s</string>
+</resources>

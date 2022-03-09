@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/horizontal_spacing_large"
+    tools:background="@color/purple_700">
+
+    <ImageView
+        android:id="@+id/ic_heart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_blood_pressure"
+        android:backgroundTint="@color/orange_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="@dimen/horizontal_spacing_normal"
+        app:layout_constraintEnd_toStartOf="@+id/systolic_text_view"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/systolic_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_spacing_large"
+        app:layout_constraintEnd_toStartOf="@+id/diastolic_text_view"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ic_heart"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Sys: 110"
+        style="@style/Widget.App.TextView.Large" />
+
+    <TextView
+        android:id="@+id/diastolic_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/systolic_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/systolic_text_view"
+        tools:text="Dia: 70"
+        style="@style/Widget.App.TextView.Large" />
+
+    <TextView
+        android:id="@+id/date_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/time_text_view"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/diastolic_text_view"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="4/sep/22"
+        style="@style/Widget.App.TextView.Normal" />
+
+    <TextView
+        android:id="@+id/time_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/date_text_view"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="4:10 PM"
+        style="@style/Widget.App.TextView.Normal" />
+
+    <ImageView
+        android:id="@+id/exclamation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/vertical_spacing_small"
+        android:src="@drawable/ic_exclamation"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
